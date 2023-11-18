@@ -1,0 +1,33 @@
+{
+  "name": "webux-task-director",
+  "version": "1.0.0",
+  "description": "",
+  "main": "example.js",
+  "scripts": {
+    "start:dev": "npx nodemon",
+    "demo:async": "npm run build && node build/example/async_example.js",
+    "demo:async-no-log": "npm run build && node build/example/async_example_no_log.js",
+    "demo:sync": "npm run build && node build/example/sync_example.js",
+    "demo:async-shell": "npm run build && node build/example/async_shell_example.js",
+    "build": "rimraf ./build && tsc",
+    "lint": "eslint . --ext .ts",
+    "lint-and-fix": "eslint . --ext .ts --fix",
+    "prettier-format": "prettier --config .prettierrc \"src/**/*.ts\" --write"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.9.1",
+    "@typescript-eslint/eslint-plugin": "^6.11.0",
+    "@typescript-eslint/parser": "^6.11.0",
+    "eslint": "^8.53.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.1",
+    "nodemon": "^3.0.1",
+    "prettier": "^3.1.0",
+    "rimraf": "^5.0.5",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
+  }
+}
